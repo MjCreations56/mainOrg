@@ -10,13 +10,14 @@ public with sharing class outbountCallout {
 
 
             Map<String, Object> payload = new Map<String, Object>();
-            payload.put('shipmentId', shipment.Shipment_Id);
+            payload.put('shipment Name', shipment.Name);
             payload.put('location', shipment.Location__c);
-            payload.put('status', shipment.Status__c);  
-    };
+            payload.put('status', shipment.Status__c);
+    
 
           request.setBody(JSON.serialize(payload));
 
           HttpResponse response = http.send(request);
           System.debug('Response: ' + response.getBody());
+    }
 }

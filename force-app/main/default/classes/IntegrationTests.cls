@@ -22,7 +22,7 @@
 @isTest
 global class IntegrationTests implements HTTPCalloutMock {
             
-       global HTTPResponse respond(HTTPRequest req){
+       public HTTPResponse respond(HTTPRequest req){
 
         HTTPResponse res = new HTTPResponse();
         res.setHeader('Content-Type', 'application/json');
@@ -36,7 +36,7 @@ global class IntegrationTests implements HTTPCalloutMock {
        static void testCallout(){
         Test.setMock(HTTPCalloutMock.class, new IntegrationTests());
 
-        Shipment__c shipment = new Shipment__c(Name='Test Shipment', Shipment_Id__c='12345', Status__c='In Transit', Location__c='Warehouse');
+        Shipment__c shipment = new Shipment__c(Name='Test Shipment', Id='12345', Status__c='In Transit', Location__c='Warehouse');
         insert shipment;
 
        Test.startTest();
@@ -45,4 +45,4 @@ global class IntegrationTests implements HTTPCalloutMock {
 
          System.assert(true);
        }
-}
+  }

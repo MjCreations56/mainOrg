@@ -24,14 +24,14 @@ private class BulkTest {
 
     @isTest
     static void testBulkInsert() {
-             List<Shipment__c> shipments = new List<Shipment__c>();
+        List<Shipment__c> shipments = new List<Shipment__c>();
         for (Integer i = 0; i < 200; i++) {
-            shipments.add(new Shipment__c(Name='Test Shipment ' + i, ));
+            shipments.add(new Shipment__c(Name='Test Shipment ' + i));
+        }
+
+        insert shipments;
+
+        List<Shipment__c> insertedShipments = [SELECT Id FROM Shipment__c WHERE Name LIKE 'Test Shipment%'];
+        System.assertEquals(200, insertedShipments.size(), 'All shipments should be inserted');
     }
-
-    insert shipments;
-
-    List<Shipment__c> insertedShipments = [SELECT Id FROM Shipment__c WHERE Name LIKE 'Test Shipment%'];
-    System.assertEquals(200, insertedShipments.size(), 'All shipments should be inserted');
-}
 }
