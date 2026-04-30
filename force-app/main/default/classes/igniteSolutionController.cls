@@ -8,7 +8,7 @@ public with sharing class igniteSolutionController {
 
     @AuraEnabled
     public static void syncShipments (List<Id> shipmentIds) {
-        //
+        
     }
 
     @AuraEnabled
