@@ -1,0 +1,53 @@
+<template>
+    <div class="container">
+        <h2 class="title"> Shipment Console</h2>
+
+        <div class="actions">
+            <button class="sync-btn" onclick={handleMassSync} disabled={isSyncDisabled}>Sync Selected</button>
+        </div>
+
+        <table class="shipment-table">
+            <thead>
+                <tr>
+                    <th> Select</th>
+                    <th> Name</th>
+                    <th> Status</th>
+                    <th> Location</th>
+                    <th> Quick Update</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <template for:each={shipment} for:item="ship">
+                    <tr key={ship.Id} class="table-row">
+                        <td>
+                            <input type = "checkbox"
+                               data-id={ship.Id}
+                               onchange={handleRowSelection}/>
+                        </td>
+
+                          <td>{ship.Name}</td>
+                          <td>{ship.Status__c}</td>
+                          <td>{ship.Location__c}</td>
+
+                          <td>
+                            <input type="text"
+                                 placeholder="Status"
+                                 data-id={ship.Id}
+                                 onchange={handleStatusChange}/>
+
+                                  <input type="text"
+                                 placeholder="Location"
+                                 data-id={ship.Id}
+                                 onchange={handleLocationChange}/>
+
+                                 <button class="update-btn"
+                                    data-id={ship.Id}
+                                    onclick={handleQuickUpdate}>Update</button>
+                          </td>
+                    </tr>
+                </template>
+            </tbody>
+        </table>
+    </div>
+</template>
