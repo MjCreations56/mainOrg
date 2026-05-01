@@ -1,0 +1,50 @@
+.container{
+    background:#ffffff;
+    padding:20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);;
+}
+.title{
+    font-size:20px;
+    margin-bottom:15px;
+
+}
+
+.actions{
+    margin-bottom: 15px;
+}
+.sync-btn{
+    background-color: #0070d2;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.sync-btn:disabled{
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.shipment-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.shipment-table th, .shipment-table td{
+   padding:10px;
+   border-bottom: 1px solid #eee;
+}
+
+.table-row:hover{
+    background-color: #f9f9f9;
+}
+
+.update-btn{
+    background-color: #2e844a;
+    color:white;
+    border:none;
+    padding: 6px 10px;
+    border-radius:5px;
+    cursor: pointer;
+    margin-top:5px;
+}
