@@ -1,18 +1,44 @@
-# Salesforce DX Project: Next Steps
+# Ignite Logistics Technical Assessment
+This project is a Salesforce-based logistics solution created as part of the Ignite Logistics technical assessment.
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+The solution focuses on:
+- Trigger optimization
+- Batch processing
+- API integration
+- LWC user interface
+- Security and testing
+- 
+- ## Features
 
-## How Do You Plan to Deploy Your Changes?
+- Shipment management console using LWC
+- Mass shipment sync
+- Quick shipment updates
+- REST API endpoint for shipment updates
+- Outbound HTTP callout service
+- Batch Apex processing
+- Record-level security implementation
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+- ## Technologies
 
-## Configure Your Salesforce DX Project
+- Apex
+- Lightning Web Components (LWC)
+- Batch Apex
+- REST API
+- Experience Cloud
+- SOQL
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+- ## Deployment Notes
 
-## Read All About It
+This project was developed using Salesforce DX.
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+Deploy:
+sfdx force:source:deploy -p force-app
+
+## Notes
+
+I am still learning Salesforce integrations and OAuth implementation. 
+For this assessment, I focused on creating functional and scalable solutions while following Salesforce best practices where possible.
+
+## Author
+
+Nkele Maryjane Bahula
