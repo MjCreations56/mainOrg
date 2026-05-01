@@ -39,7 +39,7 @@
     color:white;
 }
 .footer-bottom{
-    bottom-top:1px solid rgba(255, 255, 255, 0.1);
+    border-top:1px solid rgba(255, 255, 255, 0.1);
     padding-top: 15px;
     text-align: center;
     font-size: 12px;
